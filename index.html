@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RUwho Lookup</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" charset="UTF-8"/>
+   
+    <!-- JavaScript Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js" integrity="sha512-dy8Q+KMsxJmEgLqvZA7kk/Pcaij/OhCK1LPj+oGuxfd/tcbbqrDSGOtiXNfzKbMun+ZBnQsTWUnhuXhVkISDOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <!-- Google Analytics (commented out) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRVFKT62MZ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-61ZTKC0JMB"></script>
+    -->
+   
+    <!-- Google Analytics Configuration -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-61ZTKC0JMB');
+    </script>
+   
+    <!-- Font Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" /> -->
+   
+    <!-- Custom Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/indian-steeds" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/hello-billy" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/senbatsu" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/fronds-getturing" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/jully-julia" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/be-vietnam-pro" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/shippori-antique" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
+   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+   
+    <!-- JavaScript -->
+</head>
+
+<body>
+
+    <div id="title"><span id="ru">RU</span> <span id="who">who</span></div>
+
+    <div id="form-wrapper">
+
+        <form id="input-form"  onsubmit="document.activeElement.blur(); hideIfMobile(); return false;"> <!--  action="{{url_for('index')}}" method="post" --> <!-- onclick="if ($(window).width() > 500) { $(this).width('75%'); } " -->
+            <input type="text" autocomplete="off" placeholder=' Type a name, e.g. "Jon Holloway"'/>
+        </form>
+
+    </div>
+
+    <div id="tips-wrapper">
+        <div>
+            <ul>
+                <li>RUwho makes it easier to search the Rutgers database and reveal what info of yours Rutgers is making public.</li>
+                <li><u>This service is not affiliated with Rutgers</u>. Data is fetched from the public RU DB and is relied upon for accuracy. </li>
+                <!--<li>Sensitive info (i.e. email, phone numbers, location, etc.) can only be viewed on RUWireless to protect privacy.</li>-->
+                <li id="submit-tip">Pressing enter or submitting the form to search is not needed; lookup will passively begin as a query is typed.</li>
+                <!--<li>A limit of 20 searches a minute is enforced. Need more? Use our free <u>RESTful API wrapper.</u></li>-->
+                <li id="filter-tip">Filter results with the "role:{role}" search command. Accepted arguments: "student", "faculty", "staff", "guest".</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div style="width: 100%; display: flex; justify-content: center; text-align: center; margin-bottom: 0.5rem; display: none;">
+
+        <div id="insecure">Sensitive contact information (emails, phone numbers, etc.) will not be shown for privacy as you're not connected to RUWireless.</div>
+
+    </div>
+
+    <div style="width: 100%; display: flex; justify-content: center; text-align: center; margin-bottom: 0.5rem;">
+
+        <div id="rate-limit"></div>
+
+    </div>
+
+    <div id="info-wrapper" style="display: flex; justify-content: center;">
+
+        <div id="info-div" style="display: none;">
+
+        </div>
+
+    </div>
+
+    <div id="spinner-wrapper" style=" margin-top: 25px; position: absolute; left: 50%; transform: translate(-50%, 0);"><div id="spinner"></div></div>
+
+    <div id="result">
+        
+    </div>
+
+    <script src="js/form.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>

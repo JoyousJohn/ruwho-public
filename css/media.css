@@ -1,0 +1,52 @@
+@media (max-width: 500px) {
+
+    #title {
+        margin-top: 1rem;
+    }
+
+    #ru {    
+        font-size: 25vw;
+    }
+
+    #who {
+        font-size: 17vw;
+    }
+
+    input {
+        font-size: 1rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    #input-form {
+        width: 90%;
+    }
+
+    #submit-tip, #filter-tip {
+        display: none;
+    }
+
+    #info-div {
+        max-width: 90%;
+    }
+
+    ::placeholder {
+        font-size: 1.2rem;
+    }
+
+    #tips-wrapper > div, #insecure {
+        max-width: 90%;
+    }
+
+    #result {
+        margin: auto 1vw;
+    }
+
+    .person-result {
+        flex-direction: column;
+    }
+
+    p {
+        text-align: center;
+    }
+}  

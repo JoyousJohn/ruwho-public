@@ -1,0 +1,127 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: rgb(250, 250, 250);  
+}
+
+* {box-sizing: border-box;}
+
+#title {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    user-select: none;
+}
+
+#ru {
+    font: 6rem Indian Steeds;
+    font-weight: bold;
+    color: rgb(233, 35, 35);
+}
+
+#who {
+    font: 4.2rem senbatsu; 
+}
+
+form {
+    width: 50%;
+    transition: 0.5s;
+}
+
+input {
+    outline: none;
+    font: 2rem Montserrat;
+    border: none;
+    width: 100%;
+    border: 3px solid rgb(95, 95, 95);
+    border-radius: 8px;
+    user-select: none;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding-left: 10px;
+}
+
+::placeholder {
+    opacity: 1;
+    color: rgb(199, 199, 199);
+    font: 1.5rem Montserrat;
+}
+
+#form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#tips-wrapper {
+    display: flex;
+    justify-content: center;
+    font: 1rem Montserrat;
+    color: gray;
+}
+
+#tips-wrapper > div {
+    max-width: 70%;
+}
+
+ul {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+#insecure, #info-div {
+    border: 1px solid rgb(255, 208, 120);
+    background-color: rgb(255, 255, 175);
+    max-width: 40%;
+    color: rgb(224, 174, 35);
+    font: 1.1rem Montserrat;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+}
+
+#rate-limit {
+    border: 1px solid rgb(216, 5, 5);
+    background-color: rgb(255, 163, 163);
+    max-width: 40%;
+    color: rgb(209, 31, 31);
+    font: 1.1rem Montserrat;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+}
+
+#result {
+    font: 2rem shippori antique;
+    color: rgb(22, 22, 22);
+    margin: auto 5vw;
+}
+
+#found {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.person-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(97, 97, 97);
+    padding: 15px;
+}
+
+p { margin: 0; }
+
+.person-role {
+    font: bold 1.2rem Arial;
+    color: rgb(159, 159, 159);
+}
+
+.extra-info {
+    font: 1.3rem Montserrat;
+    color: rgb(51, 51, 51);
+    display: none;
+    text-align: right;
+}
