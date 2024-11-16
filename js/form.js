@@ -83,7 +83,7 @@ function callback(entries, observer) {
             } else {
 
                 $.ajax({
-                    url: 'https://ruwho-back.onrender.com/adv/' + id,
+                    url: 'https://rutgers.up.railway.app/adv/' + id,
                     success: function(a_response) {
                         //console.log("RESPONSE loaded from API")
                         localStorage.setItem(id, JSON.stringify(a_response.person));
@@ -167,7 +167,7 @@ function doneTyping () {
         $('#spinner').fadeIn();
 
         xhr = $.ajax({
-            url: 'https://ruwho-back.onrender.com/search/' + input,
+            url: 'https://rutgers.up.railway.app/search/' + input,
             //dataType: "json",
             success: function(response) {
                 //console.log(response);

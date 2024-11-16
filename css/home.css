@@ -33,7 +33,7 @@ form {
 
 input {
     outline: none;
-    font: 2rem Montserrat;
+    font: 2rem 'Readex Pro';
     border: none;
     width: 100%;
     border: 3px solid rgb(95, 95, 95);
@@ -47,7 +47,7 @@ input {
 ::placeholder {
     opacity: 1;
     color: rgb(199, 199, 199);
-    font: 1.5rem Montserrat;
+    font: 1.5rem 'Readex Pro';
 }
 
 #form-wrapper {
@@ -58,7 +58,7 @@ input {
 #tips-wrapper {
     display: flex;
     justify-content: center;
-    font: 1rem Montserrat;
+    font: 1rem 'Readex Pro';
     color: gray;
 }
 
@@ -76,7 +76,7 @@ ul {
     background-color: rgb(255, 255, 175);
     max-width: 40%;
     color: rgb(224, 174, 35);
-    font: 1.1rem Montserrat;
+    font: 1.1rem 'Readex Pro';
     padding: 10px;
     border-radius: 8px;
     display: none;
@@ -87,7 +87,7 @@ ul {
     background-color: rgb(255, 163, 163);
     max-width: 40%;
     color: rgb(209, 31, 31);
-    font: 1.1rem Montserrat;
+    font: 1.1rem 'Readex Pro';
     padding: 10px;
     border-radius: 8px;
     display: none;
@@ -120,7 +120,7 @@ p { margin: 0; }
 }
 
 .extra-info {
-    font: 1.3rem Montserrat;
+    font: 1.3rem 'Readex Pro';
     color: rgb(51, 51, 51);
     display: none;
     text-align: right;
